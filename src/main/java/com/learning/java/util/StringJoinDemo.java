@@ -1,5 +1,6 @@
 package com.learning.java.util;
 
+import java.math.BigDecimal;
 import java.util.StringJoiner;
 
 /**
@@ -7,15 +8,14 @@ import java.util.StringJoiner;
  */
 public class StringJoinDemo {
 
-    public static void main(String args[]){
-
-        StringJoinDemo joinObject=new StringJoinDemo();
-        joinObject.method1();
-
+    public static void main(String args[]) {
+        StringJoinDemo joinObject = new StringJoinDemo();
+       // joinObject.method1();
+        joinObject.bigDecimalMax();
     }
 
-    void method1(){
-        StringJoiner joiner=new StringJoiner(",");
+    void method1() {
+        StringJoiner joiner = new StringJoiner(",");
         System.out.println(joiner.length());
         joiner.add("test1");
         joiner.add("test2");
@@ -23,5 +23,13 @@ public class StringJoinDemo {
         joiner.add("test4");
 
         System.out.println(joiner.length());
+
+    }
+
+    void bigDecimalMax(){
+        BigDecimal bbb=new BigDecimal(66);
+        BigDecimal ccc=new BigDecimal(77);
+
+        System.out.println(bbb.max(ccc));
     }
 }
