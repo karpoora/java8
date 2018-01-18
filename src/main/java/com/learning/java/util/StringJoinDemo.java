@@ -10,7 +10,7 @@ public class StringJoinDemo {
 
     public static void main(String args[]) {
         StringJoinDemo joinObject = new StringJoinDemo();
-       // joinObject.method1();
+        joinObject.method1();
         joinObject.bigDecimalMax();
     }
 
@@ -23,6 +23,7 @@ public class StringJoinDemo {
         joiner.add("test4");
 
         System.out.println(joiner.length());
+        System.out.println(joiner.toString());
 
     }
 

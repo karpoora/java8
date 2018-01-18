@@ -2,7 +2,6 @@ package com.learning.java.practice.collections;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -39,12 +38,8 @@ public class SortMapByValueDemo {
         List<Map.Entry<String,Integer>> mapList=new ArrayList(unsorted.entrySet());
         LinkedHashMap<String,Integer> sortedMap=new LinkedHashMap<>();
         System.out.println(mapList);
-        Collections.sort(mapList, new Comparator<Map.Entry<String, Integer>>() {
-            @Override
-            public int compare(Map.Entry<String, Integer> o1, Map.Entry<String, Integer> o2) {
-                return o2.getValue().compareTo(o1.getValue());
-            }
-        });
+        mapList.sort((Map.Entry<String,Integer> e1,Map.Entry<String,Integer> e2)
+                ->e2.getValue().compareTo(e1.getValue()));
         for(Map.Entry<String,Integer> e:mapList){
             sortedMap.put(e.getKey(),e.getValue());
         }
